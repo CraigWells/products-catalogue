@@ -1,5 +1,2 @@
-# components
-html / css code samples
+# Products catalogue
 
-Contents 
-- Products-cat
