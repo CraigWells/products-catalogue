@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Products</title>
+  <meta name="description" content="Products">
+  <meta name="author" content="craigdavidwells.xyz.com">
+  <link rel="stylesheet" href="main.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+  <div id="products-wrapper" data-ng-app="myApp" ng-controller="myCtrl">
+        <product-container data-ng-repeat="x in products">
+            <div class="padding-screen"><div class="view-details"></div></div>
+            <div class="image-details">
+                <name></name>
+                <price></price>
+                <description></description> 
+            </div>
+            <div class="hidden-content">
+                <hr class="hidden-line">
+                <div class="label">Sizes</div>
+                <sizes></sizes>
+                <div class="label">Colours</div>
+                <div class="colour {{colour}}" ng-repeat="colour in x.colours"></div> 
+            </div>
+        </product-container>
+  </div>
+	<script src="angular.min.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
